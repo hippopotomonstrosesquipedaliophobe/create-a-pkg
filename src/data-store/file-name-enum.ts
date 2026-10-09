@@ -8,7 +8,7 @@
  * @copyright 2026 ©️ MrMudBean
  * @since 2026-01-30 18:07
  * @version 1.2.0
- * @lastModified 2026-07-01 00:16
+ * @lastModified 2026-10-02 04:51
  */
 
 export enum FileName {
@@ -46,10 +46,6 @@ export enum FileName {
   DETECT_CHANGES = 'scripts/detect_changes.sh',
   /** 手动检验发布的包 */
   WORKFLOW_DISPATCH = 'scripts/workflow_dispatch.sh',
-  /** 
-   * ## 该字段已废弃
-   * 检验当前是否安装了 @qqi/check-version */
-  CHECK_VERSION_INSTALL = 'scripts/check_version_install.sh',
   /** CI/CD 目录 */
   CI_CD = '.github/workflows',
   /** CI/CD 发布文件 */

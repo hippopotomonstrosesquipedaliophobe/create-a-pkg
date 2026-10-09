@@ -21,7 +21,7 @@ export async function askForWithBin() {
       {
         value: 2,
         label: '库 + bin',
-        tip: '即包含可执行又包含可导出使用内容，譬如：' + greenPen`qqi`,
+        tip: '即包含可执行又包含可导出使用内容，譬如：' + greenPen`nry`,
       },
     ],
   });

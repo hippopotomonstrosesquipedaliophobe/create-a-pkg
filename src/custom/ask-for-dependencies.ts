@@ -6,7 +6,7 @@ import { dataStore } from '../data-store/index';
 import { originDependencies } from '../data-store/origin-dependencies';
 import type { Dependencies } from '../types';
 import { dog } from '../utils/dog';
-import { qqi } from '../utils/qqi';
+import { ld } from '../utils/local-data';
 
 /**  问询当前使用的依赖项  */
 export async function askForDependencies() {
@@ -57,8 +57,8 @@ export async function askForDependencies() {
   }
   local.dependencies = result;
 
-  if (qqi.available) {
+  if (ld.available) {
     dog('执行储存的数据', local);
-    qqi.write('config', local);
+    ld.write('config', local);
   }
 }

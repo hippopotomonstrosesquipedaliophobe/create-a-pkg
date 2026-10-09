@@ -7,7 +7,7 @@
  * @copyright 2026 ©️ MrMudBean
  * @since 2024-08-30 18:44
  * @version 1.1.0
- * @lastModified 2026-07-01 23:08
+ * @lastModified 2026-10-05 20:03
  *
  * 当配置包名时，后自动创建包的工作路径
  */
@@ -219,11 +219,9 @@ class DataStore {
       'gvv',
       'jja',
       'pjj',
-      'qqi',
       'rollup',
       'rollup-plugin-cleanup',
       'rollup-plugin-copy',
-      'rollup-plugin-license',
       'rollup-plugin-typescript2',
       'tslib',
       'vjj',

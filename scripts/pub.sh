@@ -60,18 +60,14 @@ fi
 
 # 5. 检测当前 npm 配置（调试用）
 log_info "检测 npm 配置"
-
 npm config list  # 检查当前配置
-
 log_info "Registry: $(npm config get registry)"
 # 注意：OIDC 模式下不应有 _authToken，这里只是检查
 log_info "Auth token: $(npm config get //registry.npmjs.org/:_authToken || echo 'NOT SET')"
-
 public
 
 # 7. 更新包内容
 cd "../"
 log_info "执行更新包名再发布"
 node "./scripts/change-name.js"
-
 public

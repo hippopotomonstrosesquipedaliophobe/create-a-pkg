@@ -3,7 +3,7 @@ import { isBusinessEmptyString } from '@vvi/is';
 import { greenPen } from '@vvi/pen';
 import { dataStore } from '../data-store/index';
 import type { LocalConfig } from '../types';
-import { qqi } from '../utils/qqi';
+import { ld } from '../utils/local-data';
 
 /**
  * 读取本地的用户名
@@ -14,8 +14,8 @@ export function readLocalValue(
   data: SelectionParamObjectData<string | symbol>[],
   pro: 'name' | 'email' | 'url',
 ) {
-  if (!qqi.available) return;
-  const config = qqi.read<LocalConfig>('config');
+  if (!ld.available) return;
+  const config = ld.read<LocalConfig>('config');
   const value = config?.author?.[pro] ?? '';
   if (isBusinessEmptyString(value)) {
     return;

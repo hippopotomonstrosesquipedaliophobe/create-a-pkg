@@ -11,11 +11,14 @@ if (isNull(packageJsonResponse)) {
 let packageJson = packageJsonResponse.content;
 // 移除冗余的键
 [
-  'scripts', 'lint-staged', 'private', 'dependencies','jja','type','packageManager'
-
-].forEach(
-  key => delete packageJson[key],
-);
+  'scripts',
+  'lint-staged',
+  'private',
+  'dependencies',
+  'jja',
+  'type',
+  'packageManager',
+].forEach(key => delete packageJson[key]);
 
 packageJson = {
   ...packageJson,
@@ -26,22 +29,16 @@ packageJson = {
   },
   description: '一个简单的代码模板库',
   license: 'MIT',
-  files: [
-    'bin.js',
-    'LICENSE',
-    'README.md',
-    'THIRD-PARTY-LICENSES.txt',
-    'CHANGELOG.md',
-  ],
+  files: ['bin.js', 'LICENSE', 'README.md', 'CHANGELOG.md'],
   keywords: ['crate a npm', 'mudbean', 'vvi'],
-  homepage: 'https://npm.lmssee.com/create-a-npm',
+  homepage: 'https://npms.gleanings.cn/create-a-npm',
   bugs: {
-    url: 'https://github.com/MrMudBean/create-a-npm/issues',
+    url: 'https://github.com/gleanings/create-a-npm/issues',
     email: 'Mr.MudBean@outlook.com',
   },
   repository: {
     type: 'git',
-    url: 'git+https://github.com/MrMudBean/create-a-npm.git',
+    url: 'git+https://github.com/gleanings/create-a-npm.git',
   },
   publishConfig: {
     access: 'public',
@@ -54,6 +51,7 @@ packageJson = {
     // 新增：声明 Node.js 兼容版本
     node: '>=18.0.0',
   },
+  buildTime: Date.now(),
 };
 
 // 写入 dist/package.json

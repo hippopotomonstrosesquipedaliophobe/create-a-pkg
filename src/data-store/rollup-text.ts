@@ -8,7 +8,7 @@
  * @copyright 2026 ©️ MrMudBean
  * @since 2026-01-30 07:47
  * @version 1.2.0
- * @lastModified 2026-07-05 07:41
+ * @lastModified 2026-10-05 13:58
  */
 
 import { FileName } from './file-name-enum';
@@ -35,11 +35,6 @@ import json from '@rollup/plugin-json';
 import cleanup from 'rollup-plugin-cleanup';
 import copy from 'rollup-plugin-copy';
 import { external } from '@vvi/rollup-external';
-${
-  isBin
-    ? "import license form 'rollup-plugin-license';\nimport terser from '@rollup/plugin-terser';"
-    : ''
-}
 
 export default {
   input: './${ts ? FileName.INDEX_TS : FileName.INDEX_JS}',
@@ -90,27 +85,7 @@ export default {
       targets: [
         { src: ['README.md', 'LICENSE', 'CHANGELOG.md'], dest: 'dist' },
       ],
-    }),${
-      isBin
-        ? `\nlicense({
-      thirdParty: {
-        allow: '(MIT OR Apache-2.0 OR BSD-3-Clause)', // 仅允许这些许可证依赖
-        output: {
-          file: 'dist/THIRD-PARTY-LICENSES.txt',
-          template: dependencies =>
-            \`THIRD-PARTY LICENSE\n${'='.repeat(50)}\n\n\`.concat(
-              dependencies
-                ?.map(
-                  dep =>
-                    \`\${dep.name} (\${dep.version})\n${'-'.repeat(30)}\n\${dep.licenseText}\n\`,
-                )
-                .join('\n'),
-            ),
-        },
-      },
-    }),`
-        : ''
-    }
+    })
   ],
 };`;
 }

@@ -10,17 +10,17 @@ import { dataStore } from '../data-store/index';
 import type { LocalConfig } from '../types';
 import { dog } from '../utils/dog';
 import { exitProgram } from '../utils/exit-program';
-import { qqi } from '../utils/qqi';
+import { ld } from '../utils/local-data';
 
 /**  问询是否使用上一次的配置  */
 export async function askForLastConfig(): Promise<string[]> {
   const originList = ['name', 'email', 'url'];
   const { local } = dataStore;
 
-  if (!qqi.available) return originList;
+  if (!ld.available) return originList;
 
   /**  获取本地储存的数据（既然数据类型是存在，使用时也需要使用 `?.` 防止数据不存在）  */
-  const config = qqi.read<LocalConfig>('config');
+  const config = ld.read<LocalConfig>('config');
 
   if (isUndefined(config?.author)) return originList;
 

@@ -1,34 +1,34 @@
 # 构建简单的 npm 库
 
-[![version](<https://img.shields.io/npm/v/create-a-npm.svg?logo=npm&logoColor=rgb(0,0,0)&label=版本号&labelColor=rgb(73,73,228)&color=rgb(0,0,0)>)](https://www.npmjs.com/package/create-a-npm) [![issues 提交](<https://img.shields.io/badge/issues-提交-rgb(255,0,63)?logo=github>)](https://github.com/MrMudBead/create-a-npm/issues)
+[![version](<https://img.shields.io/npm/v/create-a-pkg.svg?logo=npm&logoColor=rgb(0,0,0)&label=版本号&labelColor=rgb(73,73,228)&color=rgb(0,0,0)>)](https://www.npmjs.com/package/create-a-pkg) [![issues 提交](<https://img.shields.io/badge/issues-提交-rgb(255,0,63)?logo=github>)](https://github.com/gleanings/create-a-pkg/issues)
 
 ## 安装
 
-该库不安装亦可直接使用 `npm create a-npm` 全局使用，如果你非要安装的话，就：
+该库不安装亦可直接使用 `npm create a-pkg` 全局使用，如果你非要安装的话，就：
 
 ```bash
-npm install  -g create-a-npm
+npm install  -g create-a-pkg
 ```
 
 ## 使用
 
 ```bash
 # 最简单的使用方式
-npm create a-npm
+npm create a-pkg
 # 指定使用 pnpm 作为 Node.js 包管理器
-npm create a-npm -- -m=pnpm
+npm create a-pkg -- -m=pnpm
 # 指定使用 yarn 作为 Node.js 包管理器
-npm create a-npm -- -m=yarn
+npm create a-pkg -- -m=yarn
 ```
 
-在使用中，会在用户的目录下创建 `.earthnut.dev.data/create-a-npm/config` 文件，以储存您的数据在本地（这些数据不会走网络，安全可用）方便下次使用时直接使用。_若觉得无用，可执行删除_，**_若觉得不知而误删除，下次后还需再次输入您的使用数据。_**所以，建议保留数据：
+在使用中，会在用户的目录下创建 `.mudbean.data/create-a-pkg/config` 文件，以储存您的数据在本地（这些数据不会走网络，安全可用）方便下次使用时直接使用。_若觉得无用，可执行删除_，***若觉得不知而误删除，下次后还需再次输入您的使用数据。***所以，建议保留数据：
 
-- linux: /home/`username`/earthnut.dev.data/create-a-npm/config
-- macOS: /Users/`username`/earthnut.dev.data/create-a-npm/config
-- Windows: C:\Users\`username`\earthnut.dev.data\create-a-npm\config
+- linux: /home/`username`/.mudbean.data/create-a-pkg/config
+- macOS: /Users/`username`/.mudbean.data/create-a-pkg/config
+- Windows: C:\Users\`username`\.mudbean.data\create-a-pkg\config
 
 (尚未在 windows 上进行全量测试)
-在使用 `npm create a-npm` 命令后，即开始构建步骤
+在使用 `npm create a-pkg` 命令后，即开始构建步骤
 
 - 步骤一：询问包将使用的 Node.js 包管理器（如果没有在启动时指定）
 - 步骤二：询问并获取输入包名
@@ -79,13 +79,13 @@ npm create a-npm -- -m=yarn
 当包名在当前执行目录下存在同名的包时，会提示更换包名或退出
 
 ```bash
-▶︎ 当前目录下存在非空同名文件夹（create-a-npm): 更换为其他名称  直接退出
+▶︎ 当前目录下存在非空同名文件夹（create-a-pkg): 更换为其他名称  直接退出
 ```
 
 当包名在同目录下不存在同名的文件夹，开始校验该包名是否存在于 [npm](https://registry.npmjs.org/)
 
 ```bash
-▶︎ 当前包名称（create a npm）已经存在于 npm 中: 更改为其他名称  忽视并继续  直接退出
+▶︎ 当前包名称（create a pkg）已经存在于 npm 中: 更改为其他名称  忽视并继续  直接退出
 ```
 
 ### 使用数据
@@ -93,9 +93,9 @@ npm create a-npm -- -m=yarn
 在构建中，会用到一个用于发布者姓名的 `name` 和一个用于包通讯的 `email` 、一个用于展示的个人网址 `url`
 
 ```bash
- □ name : earthnutDev
- □ email : earthnut.dev@outlook.com
- □ url : https://earthnut.dev
+ □ name : Mr.MudBean
+ □ email : Mr.MudBean@outlook.com
+ □ url : https://mudbean.cn
 ```
 
 ### 选择开发模式

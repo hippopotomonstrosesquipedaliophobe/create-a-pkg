@@ -2,6 +2,12 @@
 
 !!! 更新依赖后需注意在 [buildDevDependencies](./src/data-store/index.ts) 方法更新返回值
 
+## 1.4.0 (2026-10-2)
+
+- 维护信息
+- 维护依赖（`qqi` 已被强制删除）
+- 移除了 `rollup-extend-license` 依赖
+
 ## 1.3.4 (2026-7-16)
 
 - 维护依赖的版本信息
@@ -30,7 +36,7 @@ Option 'downlevelIteration' has been removed. Please remove it from your configu
 ## 1.3.0 (2026-7-1)
 
 - 修改 `tsconfig.types.json` 导出文件（ declarationDir ）路径及根（ rootDir ）
-- 移除  LICENSE 文件中的中文部分（冗余且显得和 low ）
+- 移除 LICENSE 文件中的中文部分（冗余且显得和 low ）
 - 移除 `.prettierignore` 文件
 
 ## 1.2.4 (2026-7-1)

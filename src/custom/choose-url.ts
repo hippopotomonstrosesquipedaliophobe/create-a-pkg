@@ -6,7 +6,7 @@ import { dataStore } from '../data-store/index';
 import { dog, dun } from '../utils/dog';
 
 import { exitProgram } from '../utils/exit-program';
-import { qqi } from '../utils/qqi';
+import { ld } from '../utils/local-data';
 import { readLocalValue } from './readLocalValue';
 import { appendDiy } from './util-append-diy';
 
@@ -66,12 +66,12 @@ async function choose(
 
   if (dun) dog(brightBlackPen('获取当前的网址 '), url);
 
-  dog('是否执行写入', qqi.available);
+  dog('是否执行写入', ld.available);
   dataStore.package.author.url = author.url = url as string;
   /**  保证可写  */
-  if (qqi.available && lastUrl !== url) {
+  if (ld.available && lastUrl !== url) {
     dog('写入的值', dataStore.local);
-    qqi.write('config', dataStore.local);
+    ld.write('config', dataStore.local);
   }
 }
 

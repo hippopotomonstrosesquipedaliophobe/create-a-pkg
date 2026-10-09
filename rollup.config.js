@@ -6,7 +6,6 @@ import terser from '@rollup/plugin-terser';
 import cleanup from 'rollup-plugin-cleanup';
 import copy from 'rollup-plugin-copy';
 import { external } from '@vvi/rollup-external';
-// import license from 'rollup-plugin-license';
 
 export default {
   input: {
@@ -24,7 +23,7 @@ export default {
   // 配置需要排除的包
   external: external({
     ignore: ['node:'],
-    include: ['@vvi', 'qqi'],
+    include: ['@vvi'],
   }),
   plugins: [
     resolve(),
@@ -44,22 +43,5 @@ export default {
         { src: ['README.md', 'LICENSE', 'CHANGELOG.md'], dest: 'dist' },
       ],
     }),
-    // license({
-    //   thirdParty: {
-    //     allow: '(MIT OR Apache-2.0 OR BSD-3-Clause)', // 仅允许这些许可证依赖
-    //     output: {
-    //       file: 'dist/THIRD-PARTY-LICENSES.txt',
-    //       template: dependencies =>
-    //         `THIRD-PARTY LICENSE\n${'='.repeat(50)}\n\n`.concat(
-    //           dependencies
-    //             ?.map(
-    //               dep =>
-    //                 `${dep.name} (${dep.version})\n${'-'.repeat(30)}\n${dep.licenseText}\n`,
-    //             )
-    //             .join('\n'),
-    //         ),
-    //     },
-    //   },
-    // }),
   ],
 };
