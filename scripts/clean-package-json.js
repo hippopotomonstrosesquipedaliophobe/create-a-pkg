@@ -33,12 +33,12 @@ packageJson = {
   keywords: ['crate a npm', 'mudbean', 'vvi'],
   homepage: 'https://npms.gleanings.cn/create-a-npm',
   bugs: {
-    url: 'https://github.com/gleanings/create-a-npm/issues',
+    url: 'https://github.com/gleanings/create-a-pkg/issues',
     email: 'Mr.MudBean@outlook.com',
   },
   repository: {
     type: 'git',
-    url: 'git+https://github.com/gleanings/create-a-npm.git',
+    url: 'git+https://github.com/gleanings/create-a-pkg.git',
   },
   publishConfig: {
     access: 'public',
