@@ -20,20 +20,21 @@ import { createRollupEg } from './createRollupEg';
 /**    */
 export function createChild() {
   const { dependencies: de } = dataStore.local;
-  createPackage();
+  createPackage(); // 创建 package.json
+  // 创建 typescript
   if (de.includes('typescript')) {
-    createTsconfig();
-    createTsconfigTypes();
+    createTsconfig(); // 创建 tsconfig.json
+    createTsconfigTypes(); // 创建 tsconfig.types.json
   }
-  rollup();
-  createRollupEg();
-  createReadMe();
-  createLicense();
-  createIndex();
-  createChangeLog();
-  if (de.includes('eslint')) eslintConfig();
-  if (de.includes('prettier')) prettier();
-  writeToFile(FileName.TODO, '# 代办\n\n');
-  createScripts();
-  createTest();
+  rollup(); // 创建 rollup.config.js
+  createRollupEg(); // 创建 rollup.config.eg.js
+  createReadMe(); // 创建 README.md
+  createLicense(); // 创建 LICENSE
+  createIndex(); // 创建 index.ts
+  createChangeLog(); // 创建 CHANGELOG.md
+  if (de.includes('eslint')) eslintConfig(); // 创建 .eslintrc.js
+  if (de.includes('prettier')) prettier(); // 创建 .prettierrc
+  writeToFile(FileName.TODO, '# 代办\n\n'); // 创建 todo.md
+  createScripts(); // 创建 scripts
+  createTest(); // 创建测试文件
 }

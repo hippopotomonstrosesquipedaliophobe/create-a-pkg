@@ -5,6 +5,7 @@ import { appendPackageScripts, writeToFile } from '../utils/index';
 
 /**  创建包  */
 export function createPackage() {
+  /**  package.json 内容 */
   const pkgInfo: PackageJson = {
     name: dataStore.name.replace(/^@(.*)\/.*$/, '$1') + '-root',
     version: '0.0.0',

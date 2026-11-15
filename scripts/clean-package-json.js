@@ -30,15 +30,15 @@ packageJson = {
   description: '一个简单的代码模板库',
   license: 'MIT',
   files: ['bin.js', 'LICENSE', 'README.md', 'CHANGELOG.md'],
-  keywords: ['crate a npm', 'mudbean', 'vvi'],
+  keywords: ['crate a npm', 'create a pkg'],
   homepage: 'https://npms.gleanings.cn/create-a-npm',
   bugs: {
-    url: 'https://github.com/gleanings/create-a-pkg/issues',
-    email: 'Mr.MudBean@outlook.com',
+    url: 'https://github.com/hippopotomonstrosesquipedaliophobe/create-a-pkg/issues',
+    email: 'MudBean@outlook.com',
   },
   repository: {
     type: 'git',
-    url: 'git+https://github.com/gleanings/create-a-pkg.git',
+    url: 'git+https://github.com/hippopotomonstrosesquipedaliophobe/create-a-pkg.git',
   },
   publishConfig: {
     access: 'public',

@@ -1,6 +1,6 @@
 # 构建简单的 npm 库
 
-[![version](<https://img.shields.io/npm/v/create-a-pkg.svg?logo=npm&logoColor=rgb(0,0,0)&label=版本号&labelColor=rgb(73,73,228)&color=rgb(0,0,0)>)](https://www.npmjs.com/package/create-a-pkg) [![issues 提交](<https://img.shields.io/badge/issues-提交-rgb(255,0,63)?logo=github>)](https://github.com/gleanings/create-a-pkg/issues)
+[![version](<https://img.shields.io/npm/v/create-a-pkg.svg?logo=npm&logoColor=rgb(0,0,0)&label=版本号&labelColor=rgb(73,73,228)&color=rgb(0,0,0)>)](https://www.npmjs.com/package/create-a-pkg) [![issues 提交](<https://img.shields.io/badge/issues-提交-rgb(255,0,63)?logo=github>)](https://github.com/hippopotomonstrosesquipedaliophobe/create-a-pkg/issues)
 
 ## 安装
 
@@ -23,9 +23,9 @@ npm create a-pkg -- -m=yarn
 
 在使用中，会在用户的目录下创建 `.mudbean.data/create-a-pkg/config` 文件，以储存您的数据在本地（这些数据不会走网络，安全可用）方便下次使用时直接使用。_若觉得无用，可执行删除_，***若觉得不知而误删除，下次后还需再次输入您的使用数据。***所以，建议保留数据：
 
-- linux: /home/`username`/.mudbean.data/create-a-pkg/config
-- macOS: /Users/`username`/.mudbean.data/create-a-pkg/config
-- Windows: C:\Users\`username`\.mudbean.data\create-a-pkg\config
+- `linux` ： `/home/`username`/.mudbean.data/create-a-pkg/config`
+- `macOS` ： `/Users/`username`/.mudbean.data/create-a-pkg/config`
+- `Windows` ： `C:\Users\`username`\.mudbean.data\create-a-pkg\config`
 
 (尚未在 windows 上进行全量测试)
 在使用 `npm create a-pkg` 命令后，即开始构建步骤

@@ -2,6 +2,14 @@
 
 !!! 更新依赖后需注意在 [buildDevDependencies](./src/data-store/index.ts) 方法更新返回值
 
+## 2.0.0 (2026-11-15)
+
+- 为自己的手贱买单
+
+## 修改
+
+- `package.json` 文件中 `scripts.diff` 值，去除了给定的默认值
+
 ## 1.4.0 (2026-10-2)
 
 - 维护信息

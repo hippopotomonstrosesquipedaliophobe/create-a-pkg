@@ -1,13 +1,13 @@
 /**
  * @module @create-a-npm/createNpm
- * @file createNpm.ts
+ * @file create-npm.ts
  * @description 创建 npm 主要内容
  * @author MrMudBean <Mr.MudBean@outlook.com>
  * @license MIT
  * @copyright 2026 ©️ MrMudBean
  * @since 2024-08-30 13:45
  * @version 1.1.0
- * @lastModified 2026-07-01 00:36
+ * @lastModified 2026-11-15 22:50
  *
  * 该操作出现在命名完成后
  */
@@ -38,7 +38,11 @@ export async function createNpm(): Promise<void> {
   }
 
   if (dataStore.workspace) {
-    if (dataStore.withRoot) createRange();
+    // 创建范围包
+    if (dataStore.withRoot) {
+      createRange();
+    }
+    // 创建子包
     createChild();
     return;
   } else {

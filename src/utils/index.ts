@@ -7,7 +7,7 @@
  * @copyright 2026 ©️ MrMudBean
  * @since 2024-08-28 12:55
  * @version 1.1.0
- * @lastModified 2026-07-04 18:39
+ * @lastModified 2026-11-15 22:51
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { _p, writeJsonFileSync } from '@vvi/node';
@@ -270,7 +270,7 @@ export function appendPackageScripts(
   appendPkgInfo({
     vjj: 'vjj',
     push: 'gvv',
-    diff: 'jja pkg --diff=淘宝',
+    diff: 'jja pkg --diff',
   });
 
   if (kind < 3) {
